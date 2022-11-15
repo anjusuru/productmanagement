@@ -2,3 +2,5 @@ include/
 Lib/
 Scripts/
 Venv/
+__pycache__
+.idea
