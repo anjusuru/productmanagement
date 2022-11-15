@@ -1,10 +1,10 @@
-from fastapi import FastAPI, status, Depends, HTTPException
+from fastapi import Depends, FastAPI, HTTPException, status
+from sqlalchemy.orm import Session
+
 import crud
 import models
 import schemas
 from db import SessionLocal, engine
-from sqlalchemy.orm import Session
-from schemas import Product
 
 app = FastAPI()
 
