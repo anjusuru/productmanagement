@@ -1,0 +1,9 @@
+{
+    "python.formatting.provider": "black",
+    "python.formatting.autopep8Path": "autopep8",
+    "editor.formatOnSave": true,
+    "python.formatting.blackArgs": [
+        "--line-length  79"
+    ],
+    "python.analysis.typeCheckingMode": "basic"
+}
