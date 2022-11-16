@@ -34,6 +34,7 @@ def create_product(product: schemas.Product, db: Session = Depends(get_db)):
         brand=product.brand,
         price=product.price,
         quantity=product.quantity,
+        category=product.category,
     )
 
     return {"product": product}
@@ -63,6 +64,7 @@ def update_product(id: int, product: schemas.Product, db: Session = Depends(get_
             brand=product.brand,
             price=product.price,
             quantity=product.quantity,
+            category=product.category,
         )
         return updated_product
     else:

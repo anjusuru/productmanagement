@@ -13,3 +13,4 @@ class Product(Base):
     brand = Column(String(20))
     price = Column(Float)
     quantity = Column(Integer)
+    category= Column(String(30))

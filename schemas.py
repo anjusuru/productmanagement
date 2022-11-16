@@ -6,3 +6,4 @@ class Product(BaseModel):
     brand: str
     price: float
     quantity: int
+    category: str

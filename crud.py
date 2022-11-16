@@ -3,8 +3,10 @@ from sqlalchemy.orm import Session
 from models import Product
 
 
-def create_product(db: Session, name, brand, price, quantity):
-    new_product = Product(name=name, brand=brand, price=price, quantity=quantity)
+def create_product(db: Session, name, brand, price, quantity, category):
+    new_product = Product(
+        name=name, brand=brand, price=price, quantity=quantity, category=category
+    )
     db.add(new_product)
     db.commit()
     db.refresh(new_product)
@@ -16,12 +18,13 @@ def get_product(db: Session, id: int):
     return db_product
 
 
-def update_product(db: Session, id, name, brand, price, quantity):
+def update_product(db: Session, id, name, brand, price, quantity, category):
     db_product = get_product(db=db, id=id)
     db_product.name = name
     db_product.brand = brand
     db_product.price = price
     db_product.quantity = quantity
+    db_product.category = category
     db.commit()
     db.refresh(db_product)
     return db_product
