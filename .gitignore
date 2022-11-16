@@ -1,6 +1,8 @@
-include/
+Include/
 Lib/
 Scripts/
-Venv/
+venv/
 __pycache__/
 .idea/
+.vscode/
+
