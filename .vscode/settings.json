@@ -2,7 +2,7 @@
     "python.formatting.provider": "black",
     "editor.formatOnSave": true,
     "python.formatting.blackArgs": [
-        "--line-length  79"
+        "--line-length  90"
     ],
-    "python.analysis.typeCheckingMode": "basic"
+    "python.analysis.typeCheckingMode": "off"
 }
