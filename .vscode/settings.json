@@ -1,8 +1,13 @@
 {
-    "python.formatting.provider": "black",
     "editor.formatOnSave": true,
+    "python.formatting.provider": "black",
     "python.formatting.blackArgs": [
-        "--line-length  90"
+        "--line-length=99"
     ],
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
     "python.analysis.typeCheckingMode": "off"
 }
