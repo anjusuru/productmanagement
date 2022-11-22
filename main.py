@@ -48,7 +48,7 @@ def get_product(id: int, db: Session = Depends(get_db)):
     else:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail={"error": f"Product with id {id} does not exist"},
+            detail="Product does not exist",
         )
 
 
@@ -70,7 +70,7 @@ def update_product(id: int, product: schemas.Product, db: Session = Depends(get_
     else:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail={"error": f"Product with id {id} does not exist"},
+            detail="Product does not exist",
         )
 
 
@@ -82,5 +82,5 @@ def delete_product(id: int, db: Session = Depends(get_db)):
     else:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail={"error": f"Product with id {id} does not exist"},
+            detail="Product does not exist",
         )
